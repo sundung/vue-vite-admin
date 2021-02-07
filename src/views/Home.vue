@@ -86,6 +86,8 @@ export default defineComponent({
       activePath = active
       if (active === '/reports') {
         ctx.proxy.$router.push('/reports')
+      } else if (active === '/users') {
+        ctx.proxy.$router.push('/users')
       }
     }
 

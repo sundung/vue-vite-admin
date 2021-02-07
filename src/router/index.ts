@@ -1,12 +1,19 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import Reports from '../components/Reports.vue'
+import Users from '../components/Users.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: Home,
-    children: [{ path: '/reports', component: Reports }],
+    children: [
+      {
+        path: '/users',
+        component: Users,
+      },
+      { path: '/reports', component: Reports },
+    ],
   },
   {
     path: '/login',
